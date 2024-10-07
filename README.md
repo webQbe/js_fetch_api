@@ -5,3 +5,8 @@
 - Using JSON Placeholder API
 - Make a POST request to the API
 - JS Arrow functions and template strings are used
+
+## How does Fetch work?
+
+- `fetch()` returns a `Promise`, similar to a placeholder in an asynchronous response.
+- 
