@@ -19,11 +19,15 @@
             fetch('sample.txt')
             .then(function(res) { // handle Promise returned by fetch
 
-                // get text from text file
-                console.log(res.text());
+                // get actual text
+                return res.text();
 
             }) 
-            
+            .then(function(data){
+
+                console.log(data);
+
+            });
 
         }
 
