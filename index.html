@@ -15,7 +15,12 @@
 
         function getText(){
 
-            // request file with fetch()
+         // using arrow functions
+         fetch('sample.txt')
+         .then((res) => res.text())
+         .then((data) => console.log(data))
+
+         /*    // request file with fetch()
             fetch('sample.txt')
             .then(function(res) { // handle Promise returned by fetch
 
@@ -27,7 +32,7 @@
 
                 console.log(data);
 
-            });
+            }); */
 
         }
 
