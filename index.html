@@ -7,12 +7,14 @@
 </head>
 <body>
     <button id="getText">Get Text</button>
+    <button id="getUsers">Get Users</button>
     <div id="output"></div>
 
 
-    <script>
 
+    <script>
         document.getElementById('getText').addEventListener('click', getText);
+        document.getElementById('getUsers').addEventListener('click', getUsers);
 
         function getText(){
 
@@ -24,6 +26,7 @@
             document.getElementById('output').innerHTML = data;
 
          })
+         .catch((err) => console.log(err)); // to catch errors
 
          /*    // request file with fetch()
             fetch('sample.txt')
@@ -41,6 +44,22 @@
 
         }
 
+
+        function getUsers(){
+
+            // request json file
+            fetch('users.json')
+            .then((res) => res.json())
+            .then((data) => {
+
+                let output = '<h2>Users</h2>';
+                
+                // log json data
+                console.log(data);
+
+            })
+
+        }
     </script>
 </body>
 </html>
